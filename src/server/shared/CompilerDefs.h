@@ -42,6 +42,11 @@
 #define COMPILER_BORLAND   2
 #define COMPILER_INTEL     3
 
+#if defined _MSC_VER && _MSC_VER >= 1910
+#include <stack>
+#include <ratio>
+#endif
+
 #ifdef _MSC_VER
 #  define COMPILER COMPILER_MICROSOFT
 #elif defined( __BORLANDC__ )
